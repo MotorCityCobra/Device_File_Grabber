@@ -7,7 +7,7 @@ Look at the available space on your iPad or whatever device and enter that amoun
 -s is the total size of all the files you are moving in MB  
 $Python3 demo.py -i '/PATH/TO/YOUR/LARGE/UNSORTED/MEDIA/FOLDER/' -s 5000
 
-You will then be promted,
+You will then be promted,  
 Would you like to move... 
 1. Videos 
 2. Music 
