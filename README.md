@@ -2,9 +2,9 @@
 This grabs media files from deep in your disorganized downloads folder randomly in an amount you specify
 Look at the available space on your iPad or whatever device and enter that amount in MB for this script to grab
 
-# Usage
--i is the path
--s is the total size of all the files you are moving in MB
+# Usage  
+-i is the path  
+-s is the total size of all the files you are moving in MB  
 $Python3 demo.py -i '/PATH/TO/YOUR/LARGE/UNSORTED/MEDIA/FOLDER/' -s 5000
 
 You will then be promted,
