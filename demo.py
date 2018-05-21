@@ -11,7 +11,7 @@ args = vars(parser.parse_args())
 
 MB = 1000000
 GB = 1000000000
-limit = args['s'] * MB
+limit = args['s'] * GB
 dird = args['i']
 chew = len(dird)
 
