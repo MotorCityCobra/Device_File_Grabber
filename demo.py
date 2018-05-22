@@ -11,26 +11,35 @@ args = vars(parser.parse_args())
 
 MB = 1000000
 GB = 1000000000
-limit = args['s'] * GB
+limit = args['s'] * MB
 dird = args['i']
 chew = len(dird)
 
-audio_types = ('*.mp3', '*.m4a', '*.ogg', '*.wav')
-vid_types = ('*.mp4', '*.mov', '*.mkv', '*.avi', '*.wmv')
-pic_types = ('*.jpg', '*.jpeg', '*.png', '*.gif', '*.bmp', '*.psd')
-
-print('Would you like to move... \n1. Audio \n2. Video \n3. Photos')
-selection = (input("Enter a number 1, 2, or 3: "))
-if int(selection) is 1:
-	media_type = audio_types
-else:
-	if int(selection) is 2:
-		media_type = vid_types
+print('Would you like to move... \n1. Videos \n2. Music \n3. Photos')
+while True:
+	try:
+		selection = int(input("\nEnter a number 1, 2, or 3: "))
+	except ValueError:
+		print('I said enter the number 1, 2, or 3')
+		continue
+	if selection is 0:
+		print('I said enter the number 1, 2, or, 3')
+		continue
+	if selection > 3:
+		print('I said enter the number 1, 2, or, 3')
+		continue
 	else:
-		if int(selection) is 3:
-			media_type = pic_types
-		else:
-			print ('ENTER 1, 2, OR 3!')
+		break
+
+if selection is 1: #VIDEO
+	media_type = ('*.mp4', '*.mov', '*.mkv', '*.avi', '*.wmv')
+else:
+	if selection is 2: #AUDIO
+		media_type = ('*.mp3', '*.m4a', '*.ogg', '*.wav')
+	else:
+		if selection is 3: #PHOTOS
+			media_type = ('*.jpg', '*.jpeg', '*.png', '*.gif', '*.bmp', '*.psd')
+
 
 dir_new = os.path.dirname(dird + '/! wish/')
 if not os.path.exists(dir_new):
@@ -58,7 +67,7 @@ def gap_fill(dird, limit, dir_new):
 	hello = (max(dicto, key=dicto.get))
 	hello_size = (os.path.getsize(hello))
 	print ('The size of the file added is ' + str(hello_size))
-	print ('I added this file ' + hello)
+	print ('\nI squeezed in this file ' + hello)
 	os.rename(hello, dir_new + '/' + hello[chew:])
 
 
@@ -69,12 +78,12 @@ for i in media_type:
 for i in range(999):
 	random.shuffle(filez)
 	for i in range(1):
-		pather = filez.pop()
-	size = os.path.getsize(pather)
+		panther = filez.pop()
+	size = os.path.getsize(panther)
 	full += size
 	if full > limit:
 		print('\n')
-		while 111 == 111:
+		while True:
 			try:
 				gap_fill(dird, limit, dir_new)
 			except ValueError:
@@ -82,8 +91,8 @@ for i in range(999):
 		print('That\'s all I could fit. \nYour ' + str(args['s']) + 'MB of files were placed in a folder called \'! wish\'')
 		break
 	else:
-		print('I added this file ' + str(pather))
-		os.rename(pather, dir_new + '/' + pather[chew:])
-		del pather
+		print('I added this file ' + str(panther))
+		os.rename(panther, dir_new + '/' + panther[chew:])
+		#del panther
 
 
