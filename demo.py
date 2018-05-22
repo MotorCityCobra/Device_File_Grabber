@@ -49,15 +49,15 @@ if not os.path.exists(dir_new):
 #... this function measures how much space is left and grabs the largest file that fills
 #... the empty space. It's called repeatedly until the max desired size is reached'
 def gap_fill(dird, limit, dir_new):
-	korn = 0
+	ice = 0
 	filez_left = []
 	for i in media_type:
 		filez_left.extend(glob.glob(dird + i))
 	dir_new2 = glob.glob(dir_new + '/*')
 	for i in dir_new2:
-		zet = os.path.getsize(i)
-		korn += zet
-	xyz = limit - korn
+		snow = os.path.getsize(i)
+		ice += snow
+	xyz = limit - ice
 	print('This is the amount of space left ' + str(xyz) + '\n')
 	dicto = {}
 	for i in filez_left:
