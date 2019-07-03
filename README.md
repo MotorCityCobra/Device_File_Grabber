@@ -19,4 +19,4 @@ If you don't enter 1, 2, or 3 you will get an error.
 
 After it moves your files you will find them in a directory called '! wish' for you to drag into your device
 
-[I don't practice or condone piracy. Just an easy example of scraping, parsing, and using data to grab files and move them around.]
+[I don't practice or condone piracy. Just an example of scraping, parsing, and using data to grab files and move them around.]
