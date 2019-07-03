@@ -1,5 +1,6 @@
 # Device_File_Grabber
-This grabs media files from deep in your disorganized media files folder randomly in an amount you specify
+Notebook (for educational/ skill showcasing purposes only) scrapes movie titles of certain scores and gets torrents.
+The other grabs media files from deep in your disorganized media files folder randomly in an amount you specify
 Look at the available space on your iPad or whatever device and enter that amount in MB for this script to grab
 
 # Usage  
