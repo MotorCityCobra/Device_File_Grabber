@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.service import Service
 service = Service('/Users/rock/tor/CC_bitChute/chromedriver')
 service.start()
 driver = webdriver.Remote(service.service_url)
-driver.get('https://www.bitchute.com/channel/counter-currentstv/')
+driver.get('https://www.bitchute.com/channel/NaturalNews/')
 
 for i in tqdm(range(15)):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
